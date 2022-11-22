@@ -51,7 +51,8 @@
 /********* RESETERS ************/
 html {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "metropolismedium", sans-serif;
+  
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -120,9 +121,10 @@ img {
 /********* VARIABLES ************/
 $black: #000;
 $white: #fff;
+$main: #1CA1FC;
 
 /********* HELPERS ************/
-.wrapper {
+.wrap {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
@@ -134,16 +136,92 @@ $white: #fff;
   align-items: center;
 }
 
+.flex-center-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width:767px) {
-  .flex-between-column {
+  .flex-between-column,
+  .flex-center-column {
     flex-direction: column;
     justify-content: center;
   }
 
-  .wrapper {
+  .wrap {
     padding: 0 20px;
   }
 }
+
+
+/********* FONTS ************/
+/* 
+h1,
+.h1 {
+  --fluid-type-min: 36px;
+  --fluid-type-max: 60px;
+  --fluid-type-target: 2.8vw;
+  font-weight: 700;
+  font-size: clamp(var(--fluid-type-min, 1rem),
+      calc(1rem + var(--fluid-type-target, 3vw)),
+      var(--fluid-type-max, 1.3rem));
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.0005em;
+  margin-bottom: 32px;
+}
+
+h2,
+.h2 {
+  --fluid-type-min: 36px;
+  --fluid-type-max: 48px;
+  --fluid-type-target: 3vw;
+  font-weight: 700;
+  font-size: clamp(var(--fluid-type-min, 1rem),
+      calc(1rem + var(--fluid-type-target, 3vw)),
+      var(--fluid-type-max, 1.3rem));
+  line-height: 1.25;
+  margin-bottom: 24px;
+}
+
+h3,
+.h3 {
+  --fluid-type-min: 30px;
+  --fluid-type-max: 36px;
+  --fluid-type-target: 1vw;
+  font-weight: 700;
+  font-size: clamp(var(--fluid-type-min, 1rem),
+      calc(1rem + var(--fluid-type-target, 3vw)),
+      var(--fluid-type-max, 1.3rem));
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.4;
+  font-weight: 300;
+} */
+
+h1 {
+  font-size: 120px;
+  color: $main;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+  font-family: "acherus_militant_1bold";
+
+  span {
+    font-size: 40%;
+    margin: 0;
+    display: block;
+  }
+}
+
+
 
 /********* NAVIGATION ************/
 .nav {
@@ -170,10 +248,12 @@ $white: #fff;
     color: $white;
     text-decoration: none;
     text-transform: uppercase;
+    font-family: "metropolislight", sans-serif;
   }
 }
 
 /********* HERO HEADER ************/
 .header {
   min-height: calc(100vh - 118px);
+  background-color: lighten($color: $black, $amount: 10%);
 }
