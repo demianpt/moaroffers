@@ -172,7 +172,7 @@ section {
 .cta {
   display: inline-block;
   padding: 20px;
-  border: 2px solid #137DC1;
+  // border: 2px solid #137DC1;
   background: linear-gradient(210deg, #125EF1 0%, #40D3FF 100%);
   border-radius: 1000px;
   color: $white;
@@ -269,7 +269,7 @@ h2 {
 }
 
 h3 {
-  font-family: "acherus_militant_1bold";
+  font-family: "metropolisbold";
   font-size: 50px;
   line-height: 1.1;
 }
@@ -383,6 +383,7 @@ p {
 
   h2 {
     margin-top: -19px;
+    text-transform: uppercase;
   }
 
   p {
@@ -390,5 +391,46 @@ p {
     font-size: 36px;
     max-width: 830px;
     margin: 60px auto;
+  }
+}
+
+
+/********* STARTED ************/
+.started {
+  h2 {
+    text-transform: uppercase;
+    max-width: none;
+  }
+
+  .form {
+    max-width: 1212px;
+    margin: 90px auto;
+    text-align: left;
+
+    input{
+      width: 27px;
+      height: 27px;
+      border-radius: 27px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 36px;
+    }
+
+    &-info {
+      margin-left: 20px;
+
+      h3 {
+        margin-top: -8px;
+      }
+
+      p {
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+    }
   }
 }
