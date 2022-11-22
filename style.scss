@@ -1,5 +1,52 @@
 /********* FONTS ************/
+@font-face {
+  font-family: 'acherus_militant_1bold';
+  src: url('/fonts/acherus_militant_1_-_bold.otf-webfont.woff2') format('woff2'),
+       url('/fonts/acherus_militant_1_-_bold.otf-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+@font-face {
+  font-family: 'metropolissemi_bold';
+  src: url('/fonts/metropolis-semibold-webfont.woff2') format('woff2'),
+       url('/fonts/metropolis-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'metropolisbold';
+  src: url('/fonts/metropolis-bold-webfont.woff2') format('woff2'),
+       url('/fonts/metropolis-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'metropolisextra_bold';
+  src: url('/fonts/metropolis-extrabold-webfont.woff2') format('woff2'),
+       url('/fonts/metropolis-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'metropolislight';
+  src: url('/fonts/metropolis-light-webfont.woff2') format('woff2'),
+       url('/fonts/metropolis-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'metropolismedium';
+  src: url('/fonts/metropolis-medium-webfont.woff2') format('woff2'),
+       url('/fonts/metropolis-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /********* RESETERS ************/
 html {
