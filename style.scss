@@ -1,4 +1,14 @@
+/********* FONTS ************/
+
+
 /********* RESETERS ************/
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 ul[class],
 ol[class] {
   padding: 0;
@@ -50,5 +60,73 @@ select {
   font: inherit;
 }
 
-html {
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+/********* VARIABLES ************/
+$black: #000;
+$white: #fff;
+
+/********* HELPERS ************/
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.flex-between-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width:767px) {
+  .flex-between-column {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+/********* NAVIGATION ************/
+.nav {
+  padding: 20px 0;
+  background-color: $black;
+
+  img {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  a {
+    display: block;
+    font-size: 14px;
+    color: $white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+/********* HERO HEADER ************/
+.header {
+  min-height: calc(100vh - 118px);
 }
