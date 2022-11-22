@@ -62,6 +62,10 @@ ol[class] {
   padding: 0;
 }
 
+strong,b {
+  font-family: "metropolisbold";
+}
+
 body,
 h1,
 h2,
@@ -164,7 +168,25 @@ section {
   }
 }
 
+/********* BUTTONS ************/
+.cta {
+  display: inline-block;
+  padding: 20px;
+  border: 2px solid #137DC1;
+  background: linear-gradient(210deg, #125EF1 0%, #40D3FF 100%);
+  border-radius: 1000px;
+  color: $white;
+  text-decoration: none;
+  font-family: "metropolisbold";
+  min-height: 86px;
+  min-width: 340px;
+  font-size: 30px;
+  transition: all 0.5s ease;
 
+  &:hover {
+    opacity: 0.6;
+  }
+}
 
 
 /********* FONTS ************/
@@ -243,7 +265,7 @@ h1 {
 h2 {
   font-size: 120px;
   font-family: "acherus_militant_1bold";
-  line-height: 1.1;
+  line-height: 1;
 }
 
 h3 {
@@ -351,7 +373,22 @@ p {
   }
 }
 
-/********* STARTED ************/
-.started {
-  background-color: $grey;
+/********* ACQUISITION ************/
+.acquisition {
+  background-color: $black;
+
+  h2,h3,p {
+    color: $white;
+  }
+
+  h2 {
+    margin-top: -19px;
+  }
+
+  p {
+    font-family: "metropolislight";
+    font-size: 36px;
+    max-width: 830px;
+    margin: 60px auto;
+  }
 }
