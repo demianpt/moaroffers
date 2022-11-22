@@ -240,7 +240,12 @@ h4,
   font-weight: 300;
 } */
 
-h1,h2,h3,h4,h5 {
+h1,h2,h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h4,h3 {
   margin: 0;
 }
 
@@ -383,7 +388,6 @@ p {
 
   h2 {
     margin-top: -19px;
-    text-transform: uppercase;
   }
 
   p {
@@ -398,7 +402,6 @@ p {
 /********* STARTED ************/
 .started {
   h2 {
-    text-transform: uppercase;
     max-width: none;
   }
 
@@ -432,5 +435,28 @@ p {
         }
       }
     }
+  }
+}
+
+
+/********* ACCOUNTS MANAGERS ************/
+.accounts {
+  min-height: 100vh;
+  display: flex;
+  background-image: url("/img/team-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  h2 {
+    font-size: 100px;
+    color: $white;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
