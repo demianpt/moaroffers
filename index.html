@@ -1,132 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoarOffers</title>
-    <link rel="stylesheet" href="style.scss">
-  </head>
-  <body>
-    <!-- Nav -->
-    <nav class="nav">
-      <div class="wrap flex-between-column">
-        <div class="nav-logo">
-          <img src="/img/logo-n.png" alt="logo">
-        </div>
-        <div class="nav-items">
-          <ul>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Our Acquisition</a></li>
-            <li><a href="#">Get Started</a></li>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Login</a></li>
-          </ul>
-      </div>
-      </div>
-    </nav>
 
-    <!-- Hero -->
-    <header class="header flex-center-column">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MoarOffers</title>
+  <link rel="stylesheet" href="style.scss">
+  <link rel="shortcut icon" href="/img/favicon.png">
+</head>
+
+<body>
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="wrap flex-between-column">
+      <div class="nav-logo">
+        <img src="/img/logo-n.png" alt="logo">
+      </div>
+      <div class="nav-items">
+        <ul>
+          <li><a href="#">About us</a></li>
+          <li><a href="#">Our Acquisition</a></li>
+          <li><a href="#">Get Started</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="header flex-center-column">
+    <div class="wrap">
+      <h1 class="h1">MOAR <span>Everything</span></h1>
+    </div>
+    <div class="header-scroll">
+      <img src="/img/scroll.png" alt="">
+      <p>Scroll down to see more</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Us -->
+    <section class="about-us">
       <div class="wrap">
-        <h1 class="h1">MOAR <span>Everything</span></h1>
-      </div>
-      <div class="header-scroll">
-        <img src="/img/scroll.png" alt="">
-        <p>Scroll down to see more</p>
-      </div>
-    </header>
-
-    <main>
-      <!-- About Us -->
-      <section class="about-us">
-        <div class="wrap">
-          <h2>ABOUT US</h2>
-          <p>For more than 20 years and a team of X people, MOAR has been leading the industry with innovative Exclusive and direct deals focused on boosting our affiliate’s performance. With our expert knowhow and proprietary tech, get ready to take your traffic to the next level!</p>
-          <h3 class="h3">Our competitive advantages:</h3>
-          <div class="about-us-advantages flex-center-column">
-            <div class="about-us-advantages__item">
-              <img src="/img/icon1.png" alt="">
-              <h4>Exclusive an direct deals</h4>
-            </div>
-            <div class="about-us-advantages__item">
-              <img src="/img/icon2.png" alt="">
-              <h4>Senior dedicated account managers</h4>
-            </div>
-            <div class="about-us-advantages__item">
-              <img src="/img/icon3.png" alt="">
-              <h4>Innovative in-house technology</h4>
-            </div>
-            <div class="about-us-advantages__item">
-              <img src="/img/icon4.png" alt="">
-              <h4>Unique landers</h4>
-            </div>
+        <h2>ABOUT US</h2>
+        <p>For more than 20 years and a team of X people, MOAR has been leading the industry with innovative Exclusive
+          and direct deals focused on boosting our affiliate’s performance. With our expert knowhow and proprietary
+          tech, get ready to take your traffic to the next level!</p>
+        <h3 class="h3">Our competitive advantages:</h3>
+        <div class="about-us-advantages flex-center-column">
+          <div class="about-us-advantages__item">
+            <img src="/img/icon1.png" alt="">
+            <h4>Exclusive an direct deals</h4>
+          </div>
+          <div class="about-us-advantages__item">
+            <img src="/img/icon2.png" alt="">
+            <h4>Senior dedicated account managers</h4>
+          </div>
+          <div class="about-us-advantages__item">
+            <img src="/img/icon3.png" alt="">
+            <h4>Innovative in-house technology</h4>
+          </div>
+          <div class="about-us-advantages__item">
+            <img src="/img/icon4.png" alt="">
+            <h4>Unique landers</h4>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- Acquisition -->
-      <section class="acquisition">
-        <div class="wrap">
-          <h2>You bring the traffic, We bring the offers!</h2>
-          <p>We acquire traffic from different channels:
-            <b>Email, display, SEO, SEM, banner, native, push, video, pop-ups</b> and many more…
-          </p>
-          <a href="#" class="cta">Signup Now</a>
+    <!-- Acquisition -->
+    <section class="acquisition">
+      <div class="wrap">
+        <h2>You bring the traffic, We bring the offers!</h2>
+        <p>We acquire traffic from different channels:
+          <b>Email, display, SEO, SEM, banner, native, push, video, pop-ups</b> and many more…
+        </p>
+        <a href="#" class="cta">Signup Now</a>
+      </div>
+    </section>
+
+    <!-- Started -->
+    <section class="started">
+      <div class="wrap">
+        <h2>Let’s get started!</h2>
+
+        <form class="form">
+          <div class="form-row">
+            <div class="form-input">
+              <input type="radio" checked name="radio" value="signup" id="signup">
+            </div>
+            <div class="form-info">
+              <h3><label for="signup">SignUp</label></h3>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-input">
+              <input type="radio" name="radio" value="contact" id="contact">
+            </div>
+            <div class="form-info">
+              <h3><label for="contact">Get contacted by your dedicated Account Manager</label></h3>
+              <p>* Integrate on API or S2S</p>
+              <p>* IGo live! you can promote our brands on PPL/PPS/Revshare</p>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-input">
+              <input type="radio" name="radio" value="convert" id="convert">
+            </div>
+            <div class="form-info">
+              <h3><label for="convert">Convert - get ready for amazing results</label></h3>
+              <p>* Scale</p>
+            </div>
+          </div>
+        </form>
+
+        <a href="#" class="cta">Signup Now</a>
+      </div>
+    </section>
+
+
+    <!-- Accounts Managers -->
+    <section class="accounts">
+      <div class="wrap">
+        <h2>Accounts Managers</h2>
+        <a href="#" class="cta">Contact Us</a>
+      </div>
+    </section>
+
+
+    <!-- Events -->
+    <section class="events">
+      <h2>Events</h2>
+      <p>Meet us at any of the next events...</p>
+
+      <div class="events-locations flex-between-column">
+        <div class="events-locations__item flex-column-between">
+          <div class="events-locations__item-top">
+            <h3>Bangkok</h3>
+            <img src="/img/bangkok.jpg" alt="">
+          </div>
+          <div class="events-locations__item-bottom">
+            <img src="/img/aw.png" alt="">
+            <p>Nov 30th - Dec 1th 2022 / Bangkok, Thailand</p>
+          </div>
         </div>
-      </section>
 
-      <!-- Started -->
-      <section class="started">
-        <div class="wrap">
-          <h2>Let’s get started!</h2>
-
-          <form class="form">
-              <div class="form-row">
-                <div class="form-input">
-                  <input type="radio" checked name="radio" value="signup" id="signup">
-                </div>
-                <div class="form-info">
-                  <h3><label for="signup">SignUp</label></h3>
-                </div>
-              </div>
-  
-              <div class="form-row">
-                <div class="form-input">
-                  <input type="radio" name="radio" value="contact" id="contact">
-                </div>
-                <div class="form-info">
-                  <h3><label for="contact">Get contacted by your dedicated Account Manager</label></h3>
-                  <p>* Integrate on API or S2S</p>
-                  <p>* IGo live! you can promote our brands on PPL/PPS/Revshare</p>
-                </div>
-              </div>
-  
-              <div class="form-row">
-                <div class="form-input">
-                  <input type="radio" name="radio" value="convert" id="convert">
-                </div>
-                <div class="form-info">
-                  <h3><label for="convert">Convert - get ready for amazing results</label></h3>
-                  <p>* Scale</p>
-                </div>
-              </div>
-          </form>
-
-          <a href="#" class="cta">Signup Now</a>
+        <div class="events-locations__item flex-column-between">
+          <div class="events-locations__item-top">
+            <h3>Las Vegas</h3>
+            <img src="/img/vegas.jpg" alt="">
+          </div>
+          <div class="events-locations__item-bottom">
+            <img src="/img/aff-summit.png" alt="">
+            <p>Jan 23rd - Jan 25th 2023 / Las Vegas, US</p>
+          </div>
         </div>
-      </section>
 
-
-      <!-- Accounts Managers -->
-      <section class="accounts">
-        <div class="wrap">
-          <h2>Accounts Managers</h2>
-          <a href="#" class="cta">Contact Us</a>
+        <div class="events-locations__item flex-column-between">
+          <div class="events-locations__item-top">
+            <h3>Cascais</h3>
+            <img src="/img/cascais.jpg" alt="">
+          </div>
+          <div class="events-locations__item-bottom">
+            <img src="/img/tes.png" alt="">
+            <p>Feb 22nd - Feb 25th 2023 / Cascais, Portugal</p>
+          </div>
         </div>
-      </section>
+      </div>
 
-    </main>
-  </body>
+      <a href="#" class="cta">Contact Us</a>
+    </section>
+  </main>
+</body>
+
 </html>

@@ -147,18 +147,25 @@ $main: #1CA1FC;
   align-items: center;
 }
 
+.flex-column-between {
+  display: flex;
+  flex-direction: column;
+}
+
 section {
   padding: 120px 0;
   text-align: center;
 }
 
-@media (max-width:767px) {
+@media (max-width:1024px) {
   .flex-between-column,
   .flex-center-column {
     flex-direction: column;
     justify-content: center;
   }
+}
 
+@media (max-width:767px) {
   section {
     padding: 60px 0;
   }
@@ -288,7 +295,7 @@ h4 {
 p {
   font-family: "metropolislight", sans-serif;
   font-size: 24px;
-  line-height: 44px;
+  line-height: 1.6;
 }
 
 
@@ -381,6 +388,10 @@ p {
 /********* ACQUISITION ************/
 .acquisition {
   background-color: $black;
+  width: 100%;
+  max-width: 93%;
+  position: relative;
+  left: 3.5%;
 
   h2,h3,p {
     color: $white;
@@ -458,5 +469,82 @@ p {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+/********* EVENTS ************/
+.events {
+  padding: 120px 30px;
+  
+  &>p {
+    margin-top: 80px;
+  }
+
+  &-locations {
+    margin: 80px 0 60px;
+
+    h3 {
+      color: $white;
+      font-family: "metropolislight";
+      font-weight: 100;
+      position: relative;
+      margin-top: 10px;
+      padding: 6px;
+      font-size: 5.9vw;
+      text-align: center;
+    }
+
+    &__item {
+      background-color: $black;
+      width: 32.2%;
+      position: relative;
+
+      &-top {
+        img {
+          margin: -43px auto 20px;
+          max-width: none;
+          width: 100%;
+        }
+      }
+
+      &-bottom {
+        text-align: center;
+        padding: 0 10px;
+
+        img {
+          margin: 4px auto 10px;
+          max-height: 46px;
+        }
+
+        p {
+          color: $white;
+          font-size: 18px;
+          line-height: 1.4;
+          font-weight: bold;
+          letter-spacing: -1px;
+          font-family: "metropolissemi_bold";
+          margin: 20px auto;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .events {
+    padding: 60px 20px;
+
+    &-locations {
+      &__item {
+        width: 100%;
+        max-width: 600px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .events {
+    padding: 60px 20px;
   }
 }
