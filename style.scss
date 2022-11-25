@@ -52,8 +52,12 @@
 html {
   box-sizing: border-box;
   font-family: "metropolismedium", sans-serif;
-  
 }
+
+html, body {
+  overflow-x: hidden;
+}
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -399,6 +403,43 @@ p {
     p {
       font-size: 14px;
       color: $white;
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .header {
+    justify-content: flex-start;
+
+    h1 {
+      font-size: 26px;
+      margin-top: 0;
+      text-align: center;
+    }
+
+    &-video, 
+    &-info {
+      position: relative;
+      left: initial;
+      top: initial;
+      transform: translateY(0);
+      width: 100%;
+    }
+
+    &-video {
+      position: relative;
+
+      video {
+      }
+
+      h2 {
+        font-size: 18vw;
+      }
+    }
+
+    &-info {
+      position: relative;
+      text-align: center;
     }
   }
 }
