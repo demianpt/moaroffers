@@ -295,6 +295,9 @@ p {
 .nav {
   padding: 20px 0;
   background-color: $black;
+  top: 0; left: 0; right: 0;
+  position: relative;
+  z-index: 999;
 
   .wrap {
     display: flex;
@@ -354,7 +357,18 @@ p {
     position: absolute;
     left: -10%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-54%);
+
+    h2 {
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 12vw;
+      transform: translateX(-50%) translateY(-50%);
+      letter-spacing: -2px;
+      mix-blend-mode: overlay;
+    }
 
     video {
       width: 100%;
