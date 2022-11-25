@@ -196,7 +196,7 @@ footer {
   transition: all 0.5s ease;
 
   &:hover {
-    opacity: 0.6;
+    opacity: 0.75;
   }
 }
 
@@ -491,6 +491,7 @@ p {
 
       &__item {
         width: 50%;
+        margin-bottom: 20px;
       }
     }
 
@@ -764,12 +765,22 @@ p {
 @media (max-width:1024px) {
   .footer {
     align-items: center;
+    padding: 60px 0;
+
+    h2 {
+      font-size: 100px;
+
+      span {
+        font-size: 50px;
+      }
+    }
 
     &-links {
       align-items: center;
 
       &__right {
         text-align: center;
+        margin-top: 20px;
       }
     }
   }
