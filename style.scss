@@ -186,7 +186,7 @@ footer {
   }
 }
 
-/********* BUTTONS ************/
+/********* BUTTONS && LINKS ************/
 .cta {
   display: inline-block;
   padding: 20px;
@@ -211,6 +211,14 @@ footer {
     font-size: 22px;
     min-height: 0;
   }
+}
+
+.link {
+  color: $main;
+  display: inline-block;
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: "metropolismedium", sans-serif;
 }
 
 /*********** FONTS ************/
@@ -345,14 +353,27 @@ p {
   }
 }
 
+@media (max-width:767px) {
+  .nav {
+    height: 90px;
+
+    img {
+      width: 120px;
+    }
+  }
+}
+
 @media (max-width:1024px) {
   .nav {
     &-items {
       opacity: 0;
       pointer-events: none;
+      display: none;
     }
   }
 }
+
+
 
 /********* HERO HEADER ************/
 .header {
@@ -792,7 +813,7 @@ p {
 }
 
 
-/*********** CONTACT ************/
+/*********** CONTACT PAGE ************/
 .contact {
   text-align: left;
   padding: 72px 0 153px;
@@ -873,6 +894,106 @@ p {
 
 @media (max-width:767px) {
   .contact {
+    padding: 48px 0;
+
+    &-form {
+      box-shadow: none;
+      padding: 0;
+
+      &__row {
+        margin-bottom: 0;
+
+        &> div {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+/*********** SIGNUP PAGE ************/
+.signup {
+  text-align: left;
+  padding: 72px 0 153px;
+
+  h3 {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  &-form {
+    background-color: $white;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 0 20px #00000029;
+    padding: 48px;
+    margin: 0 auto;
+
+    label {
+      margin-bottom: 9px;
+      display: inline-block;
+    }
+
+    &__row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 34px;
+
+      .link {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 8px);
+      }
+
+      &>div {
+        width: 47%;
+        position: relative;
+      }
+
+      &.full {
+        margin-bottom: 0;
+
+        &>div {
+          width: 100%;
+        }
+      }
+    }
+
+    &__cta {
+      text-align: center;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 52px;
+      background-color: $formElBg;
+      border: 1px solid $formBorder;
+      border-radius: 4px;
+      padding: 0 10px;
+      resize: none;
+    }
+
+    textarea {
+      padding: 10px;
+      min-height: 200px;
+      width: 100%;
+    }
+    
+    p {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .cta {
+      margin: 30px auto;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .signup {
     padding: 48px 0;
 
     &-form {
