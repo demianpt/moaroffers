@@ -836,7 +836,7 @@ p {
     margin: 0 auto;
   }
 
-  p {
+  &>p {
     margin-bottom: 60px;
   }
 
@@ -878,6 +878,29 @@ p {
         position: relative;
       }
 
+      &.checkbox {
+        max-width: 420px;
+        flex-wrap: nowrap;
+        margin: 0 auto;
+        align-items: flex-start;
+
+        input {
+          display: inline-block;
+          width: 18px;
+          height: 18px;
+          border: 1px solid $formBorder;
+          background-color: $formElBg; 
+          margin-right: 10px;
+        }
+
+        p {
+          font-size: 13px;
+          text-align: left;
+          margin: 0;
+          display: inline-block;
+        }
+      }
+
       &.full {
 
         &>div {
@@ -890,7 +913,7 @@ p {
       text-align: center;
     }
 
-    input, select, textarea {
+    input:not([type="checkbox"]), select, textarea {
       width: 100%;
       min-height: 52px;
       background-color: $formElBg;
@@ -907,7 +930,7 @@ p {
     }
 
     .cta {
-      margin: 68px auto 40px;
+      margin: 40px auto;
     }
   }
 }

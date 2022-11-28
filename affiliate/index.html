@@ -33,7 +33,6 @@
     <section class="contact forms">
       <div class="wrap">
 
-
         <form class="forms-form">
           <h3>Affiliate Signup</h3>
 
@@ -73,8 +72,8 @@
               <input type="text" name="chatid" id="chatid">
             </div>
             <div>
-              <label for="select">Business Type*</label>
-              <select name="select">
+              <label for="business">Business Type*</label>
+              <select name="business">
                 <option value="" selected disabled>Please choose one</option>
                 <option value="dog">Dog</option>
                 <option value="cat">Cat</option>
@@ -87,9 +86,9 @@
           </div>
 
           <div class="forms-form__row full">
-            <label for="select">How did you hear about MOAR Offers? *
+            <label for="heared">How did you hear about MOAR Offers? *
             </label>
-            <select name="select">
+            <select name="heared" id="heared">
               <option value="" selected disabled>Please choose one</option>
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
@@ -116,8 +115,16 @@
             </div>
             <div>
               <label for="confirm">Confirm Password</label>
-              <input type="text" name="confirm" id="confirm">
+              <input type="password" name="confirm" id="confirm">
             </div>
+          </div>
+
+
+          <div class="forms-form__row checkbox">
+            <input type="checkbox" name="agree" id="agree">
+            <p>
+              Check here to indicate that you have read and agree to the MOAR Offers Affiliate Terms, Privacy Policy and Legal Notice.
+            </p>
           </div>
 
           <div class="forms-form__cta">
