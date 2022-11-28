@@ -818,209 +818,8 @@ p {
   }
 }
 
-
-/*********** CONTACT PAGE ************/
-.contact {
-  text-align: left;
-  padding: 72px 0 153px;
-
-  h3,
-  p {
-    max-width: 768px;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  p {
-    margin-bottom: 60px;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    margin-bottom: 40px;
-  }
-
-  &-form {
-    background-color: $white;
-    max-width: 1000px;
-    width: 100%;
-    box-shadow: 0 0 20px #00000029;
-    padding: 48px;
-    margin: 0 auto;
-
-    label {
-      margin-bottom: 9px;
-      display: inline-block;
-    }
-
-    &__row {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin-bottom: 34px;
-
-      &>div {
-        width: 47%;
-      }
-
-      &.full {
-        margin-bottom: 0;
-
-        &>div {
-          width: 100%;
-        }
-      }
-    }
-
-    &__cta {
-      text-align: center;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      min-height: 52px;
-      background-color: $formElBg;
-      border: 1px solid $formBorder;
-      border-radius: 4px;
-      padding: 0 10px;
-      resize: none;
-    }
-
-    textarea {
-      padding: 10px;
-      min-height: 200px;
-      width: 100%;
-    }
-
-    .cta {
-      margin: 68px auto 40px;
-    }
-  }
-}
-
-@media (max-width:767px) {
-  .contact {
-    padding: 48px 0;
-
-    &-form {
-      box-shadow: none;
-      padding: 0;
-
-      &__row {
-        margin-bottom: 0;
-
-        &> div {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-}
-
-/*********** SIGNUP PAGE ************/
-.signup {
-  text-align: left;
-  padding: 72px 0 153px;
-
-  h3 {
-    text-align: center;
-    margin-bottom: 60px;
-    text-transform: uppercase;
-  }
-
-  &-form {
-    background-color: $white;
-    max-width: 1000px;
-    width: 100%;
-    box-shadow: 0 0 20px #00000029;
-    padding: 48px;
-    margin: 0 auto;
-
-    label {
-      margin-bottom: 9px;
-      display: inline-block;
-    }
-
-    &__row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 34px;
-
-      .link {
-        position: absolute;
-        right: 0;
-        top: calc(100% + 8px);
-      }
-
-      &>div {
-        width: 47%;
-        position: relative;
-      }
-
-      &.full {
-        margin-bottom: 0;
-
-        &>div {
-          width: 100%;
-        }
-      }
-    }
-
-    &__cta {
-      text-align: center;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      min-height: 52px;
-      background-color: $formElBg;
-      border: 1px solid $formBorder;
-      border-radius: 4px;
-      padding: 0 10px;
-      resize: none;
-    }
-
-    textarea {
-      padding: 10px;
-      min-height: 200px;
-      width: 100%;
-    }
-    
-    p {
-      font-size: 16px;
-      font-weight: bold;
-    }
-
-    .cta {
-      margin: 30px auto;
-    }
-  }
-}
-
-@media (max-width:767px) {
-  .signup {
-    padding: 48px 0;
-
-    &-form {
-      box-shadow: none;
-      padding: 0;
-
-      &__row {
-        margin-bottom: 0;
-
-        &> div {
-          width: 100%;
-          margin-bottom: 20px;
-        }
-      }
-    }
-  }
-}
-
-/*********** AFFILIATE PAGE ************/
-.affiliate {
+/*********** FORMS PAGES ************/
+.forms {
   text-align: left;
   padding: 72px 0 153px;
 
@@ -1076,6 +875,7 @@ p {
 
       &>div {
         width: 47%;
+        position: relative;
       }
 
       &.full {
@@ -1113,7 +913,7 @@ p {
 }
 
 @media (max-width:767px) {
-  .affiliate {
+  .forms {
     padding: 48px 0;
 
     &-form {
@@ -1123,9 +923,9 @@ p {
       &__row {
         margin-bottom: 0;
 
-      &.full {
-        margin-bottom: 20px;
-      }
+        &.full {
+          margin-bottom: 20px;
+        }
 
         &> div {
           width: 100%;
@@ -1133,5 +933,23 @@ p {
         }
       }
     }
+  }
+}
+
+/*Forms page variants*/
+.signup {
+  .forms-form__row {
+    justify-content: center;
+  }
+
+  div > .link {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+  }
+
+  .forms-form__cta p {
+    font-size: 16px;
+    margin: 20px auto;
   }
 }
