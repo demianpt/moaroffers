@@ -131,6 +131,8 @@ $black: #000;
 $grey: #F1F1F1;
 $white: #fff;
 $main: #1CA1FC;
+$formElBg: #F5F8FA;
+$formBorder: #CBD6E2;
 
 /********* HELPERS ************/
 .wrap {
@@ -162,6 +164,10 @@ footer {
   text-align: center;
 }
 
+footer {
+  text-align: center;
+}
+
 @media (max-width:1024px) {
   .flex-between-column,
   .flex-center-column {
@@ -189,7 +195,7 @@ footer {
   color: $white;
   text-decoration: none;
   font-family: "metropolisbold";
-  min-height: 86px;
+  min-height: 79px;
   min-width: 340px;
   font-size: 30px;
   text-align: center;
@@ -207,7 +213,7 @@ footer {
   }
 }
 
-/********* FONTS ************/
+/*********** FONTS ************/
 /* 
 h1,
 .h1 {
@@ -458,7 +464,6 @@ p {
 
 /********* ABOUT US ************/
 .about-us {
-
   p {
     margin: 78px  auto;
     max-width: 768px;
@@ -782,6 +787,54 @@ p {
         text-align: center;
         margin-top: 20px;
       }
+    }
+  }
+}
+
+
+/*********** CONTACT ************/
+.contact {
+  text-align: left;
+
+  h3,
+  p {
+    max-width: 768px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  p {
+    margin-bottom: 60px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  &-form {
+    background-color: $white;
+    max-width: 1000px;
+    width: 100%;
+    box-shadow: 0 0 20px #00000029;
+    padding: 48px;
+    margin: 60px auto 0;
+
+    &__row {
+      display: flex;
+      justify-content: space-between;
+
+      &>div {
+        width: 47%;
+      }
+    }
+
+    input, select {
+      width: 100%;
+      min-height: 52px;
+      background-color: $formElBg;
+      border: 1px solid $formBorder;
+      border-radius: 4px;
     }
   }
 }
