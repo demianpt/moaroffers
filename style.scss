@@ -795,6 +795,7 @@ p {
 /*********** CONTACT ************/
 .contact {
   text-align: left;
+  padding: 72px 0 153px;
 
   h3,
   p {
@@ -809,7 +810,7 @@ p {
 
   h3 {
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 
   &-form {
@@ -818,23 +819,53 @@ p {
     width: 100%;
     box-shadow: 0 0 20px #00000029;
     padding: 48px;
-    margin: 60px auto 0;
+    margin: 0 auto;
+
+    label {
+      margin-bottom: 9px;
+      display: inline-block;
+    }
 
     &__row {
       display: flex;
       justify-content: space-between;
+      margin-bottom: 34px;
 
       &>div {
         width: 47%;
       }
+
+      &.full {
+        margin-bottom: 0;
+
+        &>div {
+          width: 100%;
+        }
+      }
     }
 
-    input, select {
+    &__cta {
+      text-align: center;
+    }
+
+    input, select, textarea {
       width: 100%;
       min-height: 52px;
       background-color: $formElBg;
       border: 1px solid $formBorder;
       border-radius: 4px;
+      padding: 0 10px;
+      resize: none;
+    }
+
+    textarea {
+      padding: 10px;
+      min-height: 200px;
+      width: 100%;
+    }
+
+    .cta {
+      margin: 68px auto 40px;
     }
   }
 }
