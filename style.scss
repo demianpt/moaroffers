@@ -829,6 +829,7 @@ p {
     &__row {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       margin-bottom: 34px;
 
       &>div {
@@ -866,6 +867,26 @@ p {
 
     .cta {
       margin: 68px auto 40px;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .contact {
+    padding: 48px 0;
+
+    &-form {
+      box-shadow: none;
+      padding: 0;
+
+      &__row {
+        margin-bottom: 0;
+
+        &> div {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }
