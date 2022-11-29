@@ -344,7 +344,7 @@ p {
 
   li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 16px;
 
     &:last-child {
       margin-right: 0;
@@ -358,6 +358,19 @@ p {
     text-decoration: none;
     text-transform: uppercase;
     font-family: "metropolislight", sans-serif;
+    transition: all 0.5s ease;
+
+    &.signup {
+      padding: 10px 16px;
+      border-radius: 4px;
+      min-width: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 56px;
+      background-color: $white;
+      background: linear-gradient(210deg, #125EF1 0%, #40D3FF 100%);
+    }
   }
 }
 
@@ -366,10 +379,10 @@ p {
   height: 45px;
   position: absolute;
   transform-origin: center;
-  transform: rotate(0deg) scale(0.7);
+  transform: rotate(0deg) scale(0.5);
   transition: .5s ease-in-out;
   cursor: pointer;
-  right: 20px;
+  right: 5px;
   display: none;
 }
 
@@ -416,9 +429,30 @@ p {
 @media (max-width:1024px) {
   .nav {
     &-items {
-      opacity: 0;
-      pointer-events: none;
-      display: none;
+      display: flex;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+      background-color: rgba($color: #000, $alpha: 0.9);
+
+      ul {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        text-align: left;
+        padding: 80px 30px 30px;
+
+        li {
+          margin: 0 0 20px;
+
+          a {
+            font-size: 22px;
+            font-family: "metropolissemi_bold";
+          }
+        }
+      }
     }
   }
 
