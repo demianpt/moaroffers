@@ -207,10 +207,19 @@ footer {
   }
 }
 
+.signup {
+  transition: all 0.5s ease;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
 @media (max-width:1024px) {
   .cta {
     font-size: 22px;
     min-height: 0;
+    min-width: 246px;
   }
 }
 
@@ -297,12 +306,46 @@ h2 {
   font-size: 120px;
   font-family: "acherus_militant_1bold";
   line-height: 1;
+  position: relative;
+  
+  &.line {
+    display: inline-block;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -40px;
+      height: 3px;
+      width: 200px;
+      background-color: #4379BC;
+    }
+  }
 }
 
 h3 {
   font-family: "metropolisbold";
   font-size: 50px;
+  position: relative;
   line-height: 1.1;
+
+  &.line {
+    display: inline-block;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -24px;
+      height: 3px;
+      width: 200px;
+      background-color: #4379BC;
+    }
+  }
 }
 
 h4 {
@@ -316,6 +359,7 @@ h5 {
   font-size: 18px;
   line-height: 1.1;
   text-transform: capitalize;
+  text-align: left;
 }
 
 p {
@@ -367,6 +411,10 @@ p {
     text-transform: uppercase;
     font-family: "metropolislight", sans-serif;
     transition: all 0.5s ease;
+
+    &:hover {
+      color: $main;
+    }
 
     &.signup {
       padding: 10px 16px;
@@ -673,6 +721,25 @@ p {
   position: relative;
   left: 3.5%;
 
+  .wrap {
+    position: relative;
+  }
+
+  .arrows {
+    position: absolute;
+    top: 0;
+    right: calc(100% - 250px);
+    max-width: 900px;
+    pointer-events: none;
+    transform: rotate(16deg);
+
+    &.right {
+      transform: scaleX(-1) rotate(10deg);
+      left: calc(100% - 220px);
+      top: 50%;
+    }
+  }
+
   h2,h3,p {
     color: $white;
   }
@@ -689,6 +756,12 @@ p {
   }
 }
 
+@media (max-width:1600px) {
+  .arrows {
+    opacity: 0.5;
+  }
+}
+
 @media (max-width:1024px) {
   .acquisition {
     padding: 70px 0;
@@ -698,14 +771,32 @@ p {
       margin: 40px auto;
       line-height: 36px;
     }
+
+    .arrows {
+      right: calc(100% - 200px);
+      max-width: 800px;
+    }
+  }
+}
+
+@media (max-width:1024px) {
+  .acquisition {
+    .arrows {
+      right: calc(100% - 200px);
+      max-width: 800px;
+      display: none;
+    }
   }
 }
 
 
 /********* STARTED ************/
 .started {
+  position: relative;
+
   h2 {
     max-width: none;
+    margin-bottom: 40px;
   }
 
   .form {
@@ -761,25 +852,54 @@ p {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  padding: 60px 0;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba($color: $white, $alpha: 0.3);
+  }
 
   h2 {
     font-size: 100px;
-    color: $white;
+    margin-bottom: 40px;
+    text-align: left;
+    color: $black;
+    max-width: 400px;
+    line-height: 0.9;
   }
 
   .wrap {
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
   }
 }
 
 @media (max-width: 1024px) {
   .accounts {
+    .wrap {
+      justify-content: space-between;
+      align-items: center;
+    }
+
     h2 {
       font-size: 40px;
+      max-width: 300px;
+      text-align: center;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .accounts {
+    background-image: url("/img/team-mobile.jpg");
   }
 }
 
@@ -905,6 +1025,16 @@ p {
 
     &__right {
       text-align: right;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        background-color: $white;
+        right: calc(100% + 66px);
+      }
 
       a {
         color: $white;
@@ -935,6 +1065,10 @@ p {
       &__right {
         text-align: center;
         margin-top: 20px;
+
+        &::before {
+          content: none;
+        }
       }
     }
   }
@@ -964,7 +1098,7 @@ p {
 
   h3 {
     text-transform: uppercase;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 
   &-form {
@@ -974,6 +1108,7 @@ p {
     box-shadow: 0 0 20px #00000029;
     padding: 48px;
     margin: 0 auto;
+    text-align: center;
 
     label {
       margin-bottom: 9px;
@@ -995,9 +1130,14 @@ p {
       flex-wrap: wrap;
       margin-bottom: 34px;
 
+      &:first-of-type {
+        margin-top: 40px;
+      }
+
       &>div {
         width: 47%;
         position: relative;
+        text-align: left;
       }
 
       &.checkbox {

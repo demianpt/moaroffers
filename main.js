@@ -13,3 +13,4 @@ function mobileNav() {
 addEventListener('DOMContentLoaded', () => {
   mobileNav()
 });
+
