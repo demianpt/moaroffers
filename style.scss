@@ -214,6 +214,13 @@ footer {
   }
 }
 
+@media (max-width:480px) {
+  .cta {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
 .link {
   color: $main;
   display: inline-block;
