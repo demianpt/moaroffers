@@ -61,6 +61,7 @@ html, body {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+
 ul[class],
 ol[class] {
   padding: 0;
@@ -435,7 +436,15 @@ p {
       justify-content: flex-start;
       align-items: flex-start;
       flex-direction: column;
-      background-color: rgba($color: #000, $alpha: 0.9);
+      background-color: rgba($color: #000, $alpha: 0.97);
+      transition: opacity 0.5s ease;
+      opacity: 0;
+      pointer-events: none;
+
+      &.open {
+        opacity: 1;
+        pointer-events: all;
+      }
 
       ul {
         display: flex;
@@ -458,6 +467,21 @@ p {
 
   .hamburger {
     display: block;
+  }
+
+  .loginLi,
+  .signupLi {
+    position: absolute;
+  }
+
+  .loginLi {
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .signupLi {
+    left: 120px;
+    bottom: 17px;
   }
 }
 
